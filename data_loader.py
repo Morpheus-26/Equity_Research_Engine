@@ -158,10 +158,43 @@ def _yf():
 
 
 def _download_close(tickers: list[str], start: str) -> pd.DataFrame:
+    import requests
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                      "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+        "Accept": "application/json",
+    }
+    p1 = int(pd.Timestamp(start).timestamp())
+    p2 = int((pd.Timestamp.today() + pd.Timedelta(days=1)).timestamp())
+    series_dict = {}
+    for tk in tickers:
+        try:
+            url = f"https://yahoo.com{tk}"
+            resp = requests.get(url, params={"period1": p1, "period2": p2, "interval": "1d"},
+                                headers=headers, timeout=10)
+            if resp.status_code == 200:
+                res = resp.json().get("chart", {}).get("result")
+                if res:
+                    ts = res[0].get("timestamp", [])
+                    quote = res[0].get("indicators", {}).get("quote", [{}])[0]
+                    adj = res[0].get("indicators", {}).get("adjclose", [{}])[0].get("adjclose")
+                    closes = adj if adj else quote.get("close", [])
+                    if ts and closes:
+                        idx = pd.to_datetime(ts, unit="s").tz_localize(None).normalize()
+                        s = pd.Series(closes, index=idx, dtype=float).dropna()
+                        s = s[~s.index.duplicated(keep="last")]
+                        if len(s) > 0:
+                            series_dict[tk] = s
+        except Exception:  # noqa: BLE001
+            continue
+    if series_dict:
+        return pd.DataFrame(series_dict).sort_index().dropna(how="all")
+
+    # Fallback to yfinance if direct chart endpoint returned nothing
     yf = _yf()
     end_dt = (date.today() + timedelta(days=1)).isoformat()
-    raw = yf.download(tickers, start=start, auto_adjust=True, progress=False, threads=True,
-                      group_by="column", timeout=20)
+    raw = yf.download(tickers, start=start, end=end_dt, auto_adjust=True, progress=False,
+                      threads=True, group_by="column", timeout=20)
     if raw is None or raw.empty:
         raise ValueError("empty price frame from Yahoo Finance")
     if isinstance(raw.columns, pd.MultiIndex):
@@ -175,6 +208,7 @@ def _download_close(tickers: list[str], start: str) -> pd.DataFrame:
     close.index = pd.to_datetime(close.index).tz_localize(None) if getattr(close.index, "tz", None) else pd.to_datetime(close.index)
     close.columns = [str(c) for c in close.columns]
     return close.sort_index().dropna(how="all")
+
 
 
 def _live_prices(tickers: list[str], years: float) -> pd.DataFrame:
