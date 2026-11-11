@@ -1,0 +1,24 @@
+{
+ "as_of": "2026-11-09",
+ "tickers": [
+  "SBIN.NS",
+  "BANKBARODA.NS",
+  "PNB.NS",
+  "CANBK.NS",
+  "UNIONBANK.NS",
+  "ETERNAL.NS",
+  "TRENT.NS",
+  "DMART.NS",
+  "NAUKRI.NS",
+  "NYKAA.NS",
+  "HAL.NS",
+  "NTPC.NS",
+  "POWERGRID.NS"
+ ],
+ "purpose": "Offline demo data for tickers added after the original data/ pack. Consulted only when a ticker is absent from data/.",
+ "provenance": {
+  "prices": "SIMULATED daily paths (market/sector/FX factor model) pinned to anchors. Nov-2024, Nov-2025 and 09-Nov-2026 anchors are actual NSE closes (split/bonus adjusted); earlier anchors are approximate. ETERNAL starts at its Jul-2021 listing and NYKAA at its Nov-2021 listing.",
+  "fundamentals": "Approximate, rounded annual figures in the yfinance statement layout for demo use; secondary lines derived from sector ratios. Not audited.",
+  "refresh": "`python data_loader.py --refresh` writes live data for every ticker into data/, after which this folder is no longer consulted."
+ }
+}

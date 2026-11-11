@@ -1,0 +1,156 @@
+{
+ "info": {
+  "symbol": "PNB.NS",
+  "longName": "Punjab National Bank",
+  "sector": "PSU Banks",
+  "currency": "INR",
+  "exchange": "NSI",
+  "currentPrice": 132.17,
+  "marketCap": 1519029810000,
+  "sharesOutstanding": 11493000000,
+  "floatShares": 3436407000,
+  "heldPercentInsiders": 0.701,
+  "fiftyTwoWeekHigh": 132.17,
+  "fiftyTwoWeekLow": 94.2,
+  "beta": 1.28,
+  "trailingEps": 15.23,
+  "forwardEps": 17.97,
+  "trailingPE": 8.68,
+  "forwardPE": 7.36,
+  "priceToBook": 1.08,
+  "bookValue": 122.68,
+  "returnOnEquity": 0.1306,
+  "dividendRate": 3.05
+ },
+ "income": {
+  "2022-03-31": {
+   "Total Revenue": 410140000000,
+   "Pretax Income": 46093333333,
+   "Tax Provision": 11523333333,
+   "Net Income": 34570000000,
+   "Interest Expense": 552218100000,
+   "Diluted Average Shares": 11493000000,
+   "Diluted EPS": 3.01,
+   "Basic EPS": 3.01
+  },
+  "2023-03-31": {
+   "Total Revenue": 466350000000,
+   "Pretax Income": 33426666667,
+   "Tax Provision": 8356666667,
+   "Net Income": 25070000000,
+   "Interest Expense": 613969020000,
+   "Diluted Average Shares": 11493000000,
+   "Diluted EPS": 2.18,
+   "Basic EPS": 2.18
+  },
+  "2024-03-31": {
+   "Total Revenue": 534670000000,
+   "Pretax Income": 109933333333,
+   "Tax Provision": 27483333333,
+   "Net Income": 82450000000,
+   "Interest Expense": 655970700000,
+   "Diluted Average Shares": 11493000000,
+   "Diluted EPS": 7.17,
+   "Basic EPS": 7.17
+  },
+  "2025-03-31": {
+   "Total Revenue": 590820000000,
+   "Pretax Income": 221733333333,
+   "Tax Provision": 55433333333,
+   "Net Income": 166300000000,
+   "Interest Expense": 760200000000,
+   "Diluted Average Shares": 11493000000,
+   "Diluted EPS": 14.47,
+   "Basic EPS": 14.47
+  },
+  "2026-03-31": {
+   "Total Revenue": 610000000000,
+   "Pretax Income": 233333333333,
+   "Tax Provision": 58333333333,
+   "Net Income": 175000000000,
+   "Interest Expense": 819000000000,
+   "Diluted Average Shares": 11493000000,
+   "Diluted EPS": 15.23,
+   "Basic EPS": 15.23
+  }
+ },
+ "balance": {
+  "2022-03-31": {
+   "Total Assets": 13148050000000,
+   "Total Debt": 1183324500000,
+   "Cash And Cash Equivalents": 788883000000,
+   "Total Liabilities Net Minority Interest": 12194250000000,
+   "Stockholders Equity": 953800000000,
+   "Retained Earnings": 524590000000,
+   "Ordinary Shares Number": 11493000000
+  },
+  "2023-03-31": {
+   "Total Assets": 14618310000000,
+   "Total Debt": 1315647900000,
+   "Cash And Cash Equivalents": 877098600000,
+   "Total Liabilities Net Minority Interest": 13619710000000,
+   "Stockholders Equity": 998600000000,
+   "Retained Earnings": 549230000000,
+   "Ordinary Shares Number": 11493000000
+  },
+  "2024-03-31": {
+   "Total Assets": 15618350000000,
+   "Total Debt": 1405651500000,
+   "Cash And Cash Equivalents": 937101000000,
+   "Total Liabilities Net Minority Interest": 14553550000000,
+   "Stockholders Equity": 1064800000000,
+   "Retained Earnings": 585640000000,
+   "Ordinary Shares Number": 11493000000
+  },
+  "2025-03-31": {
+   "Total Assets": 18100000000000,
+   "Total Debt": 1629000000000,
+   "Cash And Cash Equivalents": 1086000000000,
+   "Total Liabilities Net Minority Interest": 16830000000000,
+   "Stockholders Equity": 1270000000000,
+   "Retained Earnings": 698500000000,
+   "Ordinary Shares Number": 11493000000
+  },
+  "2026-03-31": {
+   "Total Assets": 19500000000000,
+   "Total Debt": 1755000000000,
+   "Cash And Cash Equivalents": 1170000000000,
+   "Total Liabilities Net Minority Interest": 18090000000000,
+   "Stockholders Equity": 1410000000000,
+   "Retained Earnings": 775500000000,
+   "Ordinary Shares Number": 11493000000
+  }
+ },
+ "cashflow": {
+  "2022-03-31": {
+   "Operating Cash Flow": 50058961665,
+   "Capital Expenditure": -6152100000,
+   "Free Cash Flow": 43906861665,
+   "Cash Dividends Paid": -6914000000
+  },
+  "2023-03-31": {
+   "Operating Cash Flow": 27348081724,
+   "Capital Expenditure": -6995250000,
+   "Free Cash Flow": 20352831724,
+   "Cash Dividends Paid": -5014000000
+  },
+  "2024-03-31": {
+   "Operating Cash Flow": 120819285957,
+   "Capital Expenditure": -8020050000,
+   "Free Cash Flow": 112799235957,
+   "Cash Dividends Paid": -16490000000
+  },
+  "2025-03-31": {
+   "Operating Cash Flow": 206145147972,
+   "Capital Expenditure": -8862300000,
+   "Free Cash Flow": 197282847972,
+   "Cash Dividends Paid": -33260000000
+  },
+  "2026-03-31": {
+   "Operating Cash Flow": 243950553814,
+   "Capital Expenditure": -9150000000,
+   "Free Cash Flow": 234800553814,
+   "Cash Dividends Paid": -35000000000
+  }
+ }
+}
